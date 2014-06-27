@@ -1,0 +1,74 @@
+body{
+  background-image: url("../images/fondo_mundial.jpg");
+  background-repeat:no-repeat;
+  /*background-size: 100% auto;*/
+}
+
+table th {
+  background-color:#B8C6D8;
+  color:#000000;
+  font-family:Arial;
+  font-size:14pt;
+  text-align:center;
+}
+/*Estilo de Clase*/
+/*Lleva punto al inicio solo cuando se declara*/
+.renglon_verde{  
+  background-color:#146A2D;
+  color:#FFFFFF;
+  font-family:Arial;
+  font-size:10pt;
+  text-align:center;
+}
+/*Estilo de Clase*/
+/*Lleva punto al inicio solo cuando se declara*/
+.renglon_verde_bajo{
+  background-color:#30A646;
+  color:#FFFFFF;
+  font-family:Arial;
+  font-size:10pt;
+  text-align:center;
+}
+/*Modificar el borde de las tablas*/
+.menu{
+  border:1px solid #000000;
+  background-color:#F7EC3C;
+}
+.menu th{
+  border:1px solid #000000;
+  background-color:#F7EC3C;
+  padding:3px;
+}
+/*Cambiar el estilo de los enlaces*/
+.menu th a{
+  background-color:#F7EC3C;
+  color:#000000;
+  font-family:Verdana;
+  font-size:16pt;
+  text-align:center;
+}
+/*Padding define el espacio entre el borde de la celda y el texto, del lado derecho, izquierdo, arriba, abajo*/
+
+.menu th a:link, a:visited{
+  color:#000000;
+  font-family:Verdana;
+  font-size:16pt;
+  text-align:center;
+  text-decoration: none; /*Desaparece lineas hasta que se pasa el cursor sobre el texto*/
+}
+
+.menu th a:hover{
+  text-decoration: underline;
+  background-color:#FFFFFF;/*Cambia color de fondo*/
+  display:block;/*Permite que se despliegue todo el enlace*/
+
+}
+
+.renglon_over{
+  background-color:#CBD028;
+  color:#000000;
+  font-family:Arial;
+  font-size:10pt;
+  text-align:center;
+}
+

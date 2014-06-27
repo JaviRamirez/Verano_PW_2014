@@ -1,0 +1,113 @@
+<html>
+   <head>
+   
+     <title>Pagina web Mundial Brasil 2014</title>
+	 <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+   </head>
+     <body>
+	   <table border="1" align="center" class="menu">
+	   <tr>
+	     <th><a href="Lista_equipos.html">Lista de Equipos</a></th>
+		 <th><a href="calendario_resultados.html">Calendario y Resultados</a></th>
+		 <th><a href="tabla_grupos.html">Tabla de Grupos</a></th>
+	   </tr>
+	   <tr>
+	     <th><a href="goleo_individual.html">Goleo Individual</a></th>
+		 <th><a href="goleo_equipos.html">Goleo por Equipos</a></th>
+		 <th><a href="estadisticas.html">Estad&iacute;sticas</a></th>
+		</tr>
+	   <tr>
+          <th colspan="3"><a href="noticias.html">Noticias</a></th>
+       </tr>
+	   <tr>
+          <th colspan="3"><a href="resultados.html">Captura de Resultados</a></th>
+       </tr>
+	   <tr>
+	     <th colspan="3"><a href="registra_jugador.html">Registra Jugadores</a></th>
+	   </tr>
+	   <tr>
+	     <th colspan="3"><a href="registra_equipo.html">Registra Equipo</a></th>
+	   </tr>
+        </table>
+         <div align="center">
+         <img width="95%" height="95%" src="images/logo-mundial2014.png"/>
+         </div>	
+		 
+		 <!--Agregamos el formulario antes de la tabla para que tenga efecto sobre la misma-->
+        <form name="resultadosForm" method="post" action="guardar.php">
+        <table border="1" align="center" width="50%">
+		  <caption><h2>Captura de Resultados</h2></caption>		 
+		  <tr>
+		    <th>Fecha</th>
+			<th>Equipo Local</th>
+			<th>Marcador</th>
+			<th>Equipo Visitante</th>
+		  </tr>
+		  <tr>
+		    <td>
+			23/Junio/2014
+			</td>
+			<td>
+			  <img width="45%" height="40%" src="images/croacia.jpg" align="center"/>
+			  Croacia
+			</td>
+			<td>
+			  <input type="text" name="equipo1_local" value="" style="width:30px;"/> - <!--input define elementos de un formulario, text para las cajas de texto-->
+			  <input type="text" name="equipo2_visitante" value="" style="width:30px;"/>
+			</td>
+			<td>
+			M&eacute;xico
+			  <img width="45%" height="40%" src="images/mexico.jpg" align="center"/>
+			  
+			</td>
+		  </tr>
+		  <tr>
+		    <td>
+			23/Junio/2014
+			</td>
+			<td>
+			  <img width="45%" height="80%" src="images/b3.jpg" align="center"/>
+			  Alemania
+			</td>
+			<td>
+			  <input type="text" name="equipo3_local" value="" style="width:30px;"/> - <!--input define elementos de un formulario, text para las cajas de texto-->
+			  <input type="text" name="equipo4_visitante" value="" style="width:30px;"/>
+			</td>
+			<td>
+			Estados Unidos
+			  <img width="45%" height="80%" src="images/b5.jpg" align="center"/>
+			  
+			</td>
+		  </tr>
+		  <td>
+			  23/Junio/2014
+			</td>
+			<td>
+			  <img width="45%" height="40%" src="images/mexico.jpg" align="center"/>
+			  <select name="SelectEquipos_local">
+			  <option value=""></option>
+			  <option value="mexico">M&eacute;xico</option>
+			  <option value="brasil">Brasil</option>
+			</td>
+			<td>
+			  <input type="text" name="equipo5_local" value="" style="width:30px;"/> - <!--input define elementos de un formulario, text para las cajas de texto-->
+			  <input type="text" name="equipo6_visitante" value="" style="width:30px;"/>
+			</td>
+			<td>
+			<img width="45%" height="80%" src="images/b5.jpg" align="center"/>
+			<select name="SelectEquipos_visitante">
+			  <option value=""></option>
+			  <option value="ghana">Ghana</option>
+			  <option value="alemania">Alemania</option>
+			</td>
+		  <tr>
+		    <td align="center" colspan="4">
+			  <input type="submit" name="Guardar" value="Guardar" /> <!--Los input de tupo submit corresponden a los botones para enviar datos de un formulario--> 
+			</td>
+		  </tr>
+		  </table>
+		  </form>
+	 </body>
+
+
+</html>
