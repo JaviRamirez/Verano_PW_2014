@@ -1,35 +1,36 @@
 <html>
  <head>
    <title>Formulario 2</title>
+   <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
  </head>
 
  <body>
-   <h2>Registro de Admision</h2>
-   <table>
-   <tr>
+   <h1>Registro de Admisi&oacute;n:</h1>
+   <p><font color="white">Campos con <font color="FF0000">*</font> son requeridos</font></p>
+   
    <th>
    <form method="POST" action="">
-     <h1>Datos Personales</h1>
+     <h2>Datos Personales</h2>
      <hr>
 
     <br>
-	<label for="id_nombre">Nombre:</label>
-    <p><input type="text" id="id_nombre" name="id_nombre" class="fondo_color"></p>
+	<label for="id_nombre" class="letra_blanca">Nombre: <font color="FF0000">*</font></label>
+    <p><input type="text" id="id_nombre" name="id_nombre"/></p>
 
     <br>
-	<label for="id_apellido_pat">Apellido Paterno:</label>
+	<label for="id_apellido_pat" class="letra_blanca">Apellido Paterno: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_apellido_pat" name="id_apellido_pat"></p>
 
     <br>
-	<label for="id_apellido_mat">Apellido Materno:</label>
+	<label for="id_apellido_mat" class="letra_blanca">Apellido Materno:</label>
     <p><input type="text" id="id_apellido_mat" name="id_apellido_mat"></p>
 
     <br>
-	<label for="id_fec_nac">Fecha de Nacimiento:</label>
+	<label for="id_fec_nac" class="letra_blanca">Fecha de Nacimiento: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_fec_nac" name="id_fec_nac"></p>
 
     <br>
-    <label for="id_sexo">Sexo:</label>
+    <label for="id_sexo" class="letra_blanca">Sexo: <font color="FF0000">*</font></label>
 			   <p><select name="Select_Sexo">
 			   <option value="selecciona">Selecciona</option>
 			   <option value="hombre">Hombre</option>
@@ -38,12 +39,12 @@
 			   </select></p>
 
 	<br>
-	<label for="id_cons_curp">Consulta de Curp:</label>
+	<label for="id_cons_curp" class="letra_blanca">Curp: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_cons_curp" name="id_cons_curp">
-    <input type="submit" name="Consulta Curp" value="consul_curp" /></p>
+    <input type="submit" name="Consulta Curp" value="Consula curp" class="fondo_azul"/></p>
 
     <br>
-    <label for="id_edo_civil">Estado civil:</label>
+    <label for="id_edo_civil" class="letra_blanca">Estado civil: <font color="FF0000">*</font></label>
 			   <p><select name="Select_edo_civil">
 			   <option value="selecciona">Selecciona</option>
 			   <option value="Soltero">Soltero</option>
@@ -53,50 +54,149 @@
 			   <option value="union_libre">Union Libre</option>
 			   </select></p>
 
-	<hr>
-	<h1>Datos de Contacto</h1>
+	<h2>Datos de Contacto:</h2>
+  <hr>
 	<br>
-	<label for="id_calle">Calle:</label>
+	<label for="id_calle" class="letra_blanca">Calle: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_calle" name="id_calle"></p>
 
     <br>
-	<label for="id_numero">Numero:</label>
+	<label for="id_numero" class="letra_blanca">Numero: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_numero" name="id_numero"></p>
 
     <br>
-	<label for="id_colonia">Colonia:</label>
+	<label for="id_colonia" class="letra_blanca">Colonia: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_colonia" name="id_colonia"></p>
 
     <br>
-	<label for="id_localidad">Localidad:</label>
+	<label for="id_localidad" class="letra_blanca">Localidad: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_localidad" name="id_localidad"></p>
 
     <br>
-	<label for="id_cod_post">Codigo Postal:</label>
+	<label for="id_cod_post" class="letra_blanca">Codigo Postal: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_cod_post" name="id_cod_post"></p>
 
     <br>
-	<label for="id_telefono">Telefono:</label>
+	<label for="id_telefono" class="letra_blanca">Telefono: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_telefono" name="id_telefono"></p>
 
     <br>
-	<label for="id_correo">Correo Electronico:</label>
+	<label for="id_correo" class="letra_blanca">Correo Electronico: <font color="FF0000">*</font></label>
     <p><input type="text" id="id_correo" name="id_correo"></p>
     </th>
 
-    <th>
-    <hr>Lugar de Nacimiento</hr>
+    <h2>Lugar de Nacimiento:</h2>
+    <hr>
     <br>
-	<label for="id_telefono">Telefono:</label>
-    <p><input type="text" id="id_telefono" name="id_telefono"></p>
+    <label for="id_pais" class="letra_blanca">Pais:</label>
+               <p><select name="Select_pais">
+               <option value=""></option>
+               <option value="canada">Canada</option>
+               <option value="mexico">M&eacute;xico</option>
+               <option value="italia">Italia</option>
+               <option value="espania">Espa&ntilde;a</option>
+               <option value="alemania">Alemania</option>
+               <option value="brasil">Brasil</option>
+               </select></p>
 
     <br>
-	<label for="id_correo">Correo Electronico:</label>
-    <p><input type="text" id="id_correo" name="id_correo"></p>
+    <label for="id_estados" class="letra_blanca">Estados:</label>
+               <p><select name="Select_estado">
+               <option value=""></option>
+               <option value="toronto">Toronto</option>
+               <option value="guadalajara">Guadalajara</option>
+               <option value="roma">Roma</option>
+               <option value="madrid">Madrid</option>
+               <option value="munich">Munich</option>
+               <option value="brasilia">Brasil</option>
+               </select></p>
 
+    <br>
+    <label for="id_municipio" class="letra_blanca">Municipio: <font color="FF0000">*</font></label>
+               <p><select name="Select_municipio">
+               <option value=""></option>
+               <option value="ontario">Ontario</option>
+               <option value="jalisco">Jalisco</option>
+               <option value="milan">Milan</option>
+               <option value="barcelona">Barcelona</option>
+               <option value="stuttgart">Stuttgart</option>
+               <option value="sao_paulo">Sao Paulo</option>
+               </select></p>
+
+    <h2>Especialidad a cursar:</h2>
+    <hr>
+    <br>
+    <label for="id_especialidad" class="letra_blanca">Especialidad: <font color="FF0000">*</font></label>
+               <p><select name="Select_especialidad">
+               <option value="">Selecciona</option>
+               <option value="sistemas">Sistemas Computacionales</option>
+               <option value="inductrial">Industrial</option>
+               <option value="administracion">Administraci&oacute;n</option>
+               <option value="fisico_matematico">Fisico-Matematico</option>
+               <option value="quimico">Quimico</option>
+               <option value="electronico">Electronico</option>
+               </select></p>
+
+    <h2>Lugar donde realiz&oacute; estudios</h2>
+    <hr>
+    <br>
+    <label for="id_estado" class="letra_blanca">Estado</label>
+               <p><select name="Select_estado">
+               <option value="">Selecciona</option>
+               <option value="guanajuato">Guanajuato</option>
+               <option value="jalisco">Jalisco</option>
+               <option value="florencia">Florencia</option>
+               <option value="sevilla">Sevilla</option>
+               <option value="groningen">Groningen</option>
+               <option value="porto_alegre">Porto Alegre</option>
+               </select></p>
+    
+    <br>
+    <label for="id_muni_pio" class="letra_blanca">Municipio</label>
+               <p><select name="Select_muni_pio">
+               <option value="sauces">Los Sauces</option>
+               <option value="vancouver">Vancouver</option>
+               <option value="viena">Viena</option>
+               <option value="granada">Granada</option>
+               <option value="gottinhen">Gottinhen</option>
+               <option value="oporto">Oporto</option>
+               </select></p>
+
+    <br>
+    <label for="id_esc_proc" class="letra_blanca">Escuela procedencia <font color="FF0000">*</font></label>
+               <p><select name="Select_esc_proc">
+               <option value=""></option>
+               <option value="uni_gto">Universidad de Guanajuato</option>
+               <option value="inst_vancouver">Instituto de Vancouver</option>
+               <option value="prepa_viena">Preparatoria de Viena</option>
+               <option value="uni_granada">Universidad de Granada</option>
+               <option value="int_gottinhen">Instituto Gottinhen</option>
+               <option value="uni_oporto">Universidad de Oporto</option>
+               </select></p>
+
+    <br>
+    <label for="id_prom_bachiller" class="letra_blanca">Promedio bachillerato: <font color="FF0000">*</font></label>
+    <p><input type="text" id="id_prom_bachiller" name="id_prom_bachiller"></p>
+
+    <br>
+    <br>
+    <label for="id_finanzamiento" class="letra_blanca">Tipo de finanzamiento <font color="FF0000">*</font></label>
+               <p><select name="Select_finanzamiento">
+               <option value=""></option>
+               <option value="">Selecciona</option>
+               <option value="cheque">Cheque</option>
+               <option value="efectivo">Efectivo</option>
+               <option value="bono">Bonos</option>
+               </select></p>
+
+    <br>
+    <p class="letra_blanca">Estoy de acuerdo que la informaci&oacute;n proporcionada en el</p>
+    <p class="letra_blanca">formulario de inscripci&oacute;n en todos sus campos son datos v&aacute;lidos y</p>
+    <p class="letra_blanca">sirvan para poder utilizar los servicios de acuerdo a la ley.</p>
+
+    <input type="submit" name="Aceptar" value="Aceptar" class="fondo_azul"/>
 
    </form>
-   </table>
 
  </body>
 </html>

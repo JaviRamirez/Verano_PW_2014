@@ -8,8 +8,42 @@
 
 .fondo_color{  
   background-color:#146A2D;
-  color:F7EC3C;
+  color:#F7EC3C;
   font-family:Arial;
   font-size:10pt;
   text-align:center;
+}
+
+.fondo_azul{
+  
+  background-color:#0000FF;/*color fondo*/
+  color:white;/*color letra*/
+  font-family:Arial;/*tipo de letra*/
+  font-size:10pt;/*tamaño de letra*/
+  text-align:center;/*posicion del texto*/
+}
+
+body{
+  background-image: url("../images/guns_roses.jpg");
+  /*background-repeat:no-repeat;*/
+  background-size: 100% auto;
+}
+
+.letra_blanca{
+  color:white;/*color letra*/
+  font-family:Arial;/*tipo de letra*/
+  font-size:10pt;/*tamaño de letra*/
+  text-align:left;/*posicion del texto*/
+  
+}
+h1{
+  color:#008000;/*color letra*/
+  /*font-family:Arial;tipo de letra*/
+  
+}
+
+h2{
+  color:#008000;/*color letra*/
+  /*font-family:Arial;tipo de letra*/
+  
 }
