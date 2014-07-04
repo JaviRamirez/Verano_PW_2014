@@ -1,0 +1,60 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/jquery.min.js"></script>
+    <script>
+    $(document).ready(
+       function(){
+       	//alert('Hola JavaScript');
+        // alert($('#elemento1').css('fontSize'));
+       	$('#elemento1').css('fontSize', '100px'); 
+       	alert($('#elemento1').css('fontSize'));
+        $('#elemento1').hide('slow');
+        $('#elemento1').show('slow');
+        $('#elemento1').click(
+                     function(){
+                     	$(this).hide('slow')
+                     }
+        );
+        
+        $('#elemento1').css({ 'fontSize' : '13px', 'color' : 'blue' })
+        $('.titulo').hide('slow');
+        $('.titulo').show('fast');
+        $('.titulo').click(
+
+              function(){
+              	$(this).css({ 'fontSize' : '20px', 'color' : 'orange' })
+              }
+        );
+        $('#boton').click(
+          function(){
+          	alert(parseInt($('#input1').val())+parseInt($('#input2').val()));
+          }
+        )
+        $('#brasil').addClass('color_letra');
+
+       });
+
+    </script>
+  </head>
+
+  <body>
+  <input type="text" id="input1">
+  <input type="text" id="input2">
+  <button id="boton">Aceptar</button>
+
+<div id="container" class="elemento2">
+  
+  <h1 id="titulo">
+    <p class="parrafo" id="elemento1">Hola mundo</p>
+
+  </h1>
+  </div>
+  <div> 
+    <h1 class="titulo">Hi world</h1>
+    <h2 class="titulo">hi world</h2>
+    <h2 id="brasil">Brasil va perder</h2>
+    </div>
+  </body>
+
+</html>
