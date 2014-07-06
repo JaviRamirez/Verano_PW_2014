@@ -7,7 +7,7 @@
        function(){
        	//alert('Hola JavaScript');
         // alert($('#elemento1').css('fontSize'));
-       	$('#elemento1').css('fontSize', '100px'); 
+       /*	$('#elemento1').css('fontSize', '100px'); 
        	alert($('#elemento1').css('fontSize'));
         $('#elemento1').hide('slow');
         $('#elemento1').show('slow');
@@ -30,18 +30,39 @@
           function(){
           	alert(parseInt($('#input1').val())+parseInt($('#input2').val()));
           }
-        )
+        );*/
         $('#brasil').addClass('color_letra');
+        $('#boton2').click(
+          function(){
+            $('#titulo2').width('10px');
+            
+          });
+        $('#titulo2').off('click');
+        $('#titulo3').hover(
+          function() {
+              $(this).css({ 'fontSize' : '50px', 'color' : 'green' }); // establece múltiples
 
+          },
+          function() {
+              $(this).css({ 'fontSize' : '25px', 'color' : 'red' }); // establece múltiples
+
+          });
+
+          $('#target').keyup(
+            function(){
+              alert('has presionado una tecla sobre titulo3');
+            });
+         
        });
 
     </script>
   </head>
 
   <body>
-  <input type="text" id="input1">
+  <!--<input type="text" id="input1">
   <input type="text" id="input2">
-  <button id="boton">Aceptar</button>
+  <button id="boton">Aceptar</button>-->
+  <button id="boton2">Aceptar</button>
 
 <div id="container" class="elemento2">
   
@@ -53,7 +74,12 @@
   <div> 
     <h1 class="titulo">Hi world</h1>
     <h2 class="titulo">hi world</h2>
-    <h2 id="brasil">Brasil va perder</h2>
+    <h2 id="brasil">Brasil no va ser campeon</h2>
+            <h1 id="titulo2">
+            <p class="parrafo2" id="elemento2">Estamos en la clase de programaci&oacute;n web</p>
+            <p class="parrafo3" id="elemento3">Estoy en la clase de conmutaci&oacute;n tambi&eacute;n</p>
+          </h1>
+                  <h1 align="center" id="titulo3">Caro bonita</h1>
     </div>
   </body>
 
