@@ -20,8 +20,10 @@
     <![endif]-->
   </head>
   <body>
-    <div class="row"><!--renglon 1-->
-    <div class="col-md-6"><!--col 1-->
+  <h2 align="center">Formulario Revista</h2>
+   <div class="container"><!--container-->
+    <!--<div class="row"><renglon 1-->
+   <!-- <div class="col-md-6">col 1-->
     <form role="form" id="id_form">
             <div class="form-group">
               <label for="nombre">Nombre:</label>
@@ -78,14 +80,24 @@
               <label for="estatus">Estatus</label>
               <input type="textarea" class="form-control" name="estatus" placeholder="Enter Estatus">
             </div>
-            <button type="submit" class="btn btn-default">Aceptar</button>
+            <!--<div class="form-group">
+                          <label for="status">Staus:</label>
+                          <select name="status">
+                              <option value="">Selecciona una opci&oacute;n</option>
+                              <option value="deshabilitado">Deshabilitado</option>
+                              <option value="suspendido">Suspendido</option>
+                              <option value="activo">Activo</option>
+                          </select>
+            </div>-->
+            <center><button type="submit" class="btn btn-default">Aceptar</button></center>
     </form>
     
-    </div><!--fin de col 1-->
-    </div><!--fin de renglon 1-->
+    <!--</div>fin de col 1-->
+    <!--</div>fin de renglon 1-->
+    </div><!--fin de container-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
     <script type="text/javascript" src="js/moment.js"></script>
@@ -104,6 +116,11 @@
                 validators: {
                     notEmpty: {
                         message: 'The nombre is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
                     }
                   }
                 },
@@ -123,6 +140,62 @@
                     }
                   }
                 },
+      titulo: {
+                message: 'The titulo is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The titulo is required and cannot be empty'
+                    }
+                  }
+                },
+      subtitulo: {
+                message: 'The subtitulo is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The subtitulo is required and cannot be empty'
+                    }
+                  }
+                },
+      numero: {
+                message: 'The numero is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The numero is required and cannot be empty'
+                    }
+                  }
+                },
+      clave: {
+                message: 'The clave is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The clave is required and cannot be empty'
+                    }
+                  }
+                },
+      directorio: {
+                message: 'The directorio is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The directorio is required and cannot be empty'
+                    }
+                  }
+                },
+      editorial: {
+                message: 'The editorial is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The editorial is required and cannot be empty'
+                    }
+                  }
+                },
+      estatus: {
+                message: 'The estatus is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The estatus is required and cannot be empty'
+                    }
+                  }
+                }
       
               }//field termina
         
