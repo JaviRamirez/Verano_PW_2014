@@ -7,10 +7,10 @@ class Integrante extends Modelo{
     
     public $atributos = array(
         
-        'idintegrante'=>array(),
+        //'idintegrante'=>array(),
         'nombre'=>array(),
         'apellido'=>array(),
-        'peso'=>array()
+        'peso'=>array(),
         'estatura'=>array(),
         'foto'=>array(),
         'edad'=>array(),
@@ -19,7 +19,7 @@ class Integrante extends Modelo{
     
     public $errores = array( );
     
-    private $idintegrante;
+    //private $idintegrante;
     private $nombre;
     private $apellido;
     private $peso;
@@ -40,13 +40,13 @@ class Integrante extends Modelo{
         return $rs;
     }
 
-    public function get_idintegrante(){
+    /*public function get_idintegrante(){
         return $this->idintegrante;
     }
     
     public function set_idintegrante($valor){
         $this->idintegrante = trim($valor);
-    }
+    }*/
 
     public function get_nombre(){
         return $this->nombre;
@@ -64,18 +64,18 @@ class Integrante extends Modelo{
     }
 
     public function get_apellido(){
-        return $this->nombre;
+        return $this->apellido;
     } 
 
     public function set_apellido($valor){
 
-        $er = new Er();
+        /*$er = new Er();
         
         if ( !$er->valida_apellido($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
-        }
+        }*/
 
-            $this->nombre = trim($valor);
+            $this->apellido = trim($valor);
     }
     
     public function get_peso(){
@@ -83,39 +83,45 @@ class Integrante extends Modelo{
     }
     
     public function set_peso($valor){
+        
         $this->peso = trim($valor);
     }
 
     public function get_estatura(){
-        return $this->peso;
+        return $this->estatura;
     }
     
-    public function set_estatuta($valor){
-        $this->peso = trim($valor);
+    public function set_estatura($valor){
+        $this->estatura = trim($valor);
     }
 
     public function get_foto(){
-        return $this->peso;
+        return $this->foto;
     }
     
     public function set_foto($valor){
-        $this->peso = trim($valor);
+        $this->foto = trim($valor);
     }
     
     public function get_Edad(){
-        return $this->peso;
+        return $this->edad;
     }
     
     public function set_Edad($valor){
-        $this->peso = trim($valor);
+        $er = new Er();
+        
+        if ( !$er->valida_numericos($valor) ){
+            $this->errores[] = "Esta edad (".$valor.") no es valido";
+        }
+        $this->edad = trim($valor);
     }
 
     public function get_idequipo(){
-        return $this->peso;
+        return $this->idequipo;
     }
     
     public function set_idequipo($valor){
-        $this->peso = trim($valor);
+        $this->idequipo = trim($valor);
     }
     
 }

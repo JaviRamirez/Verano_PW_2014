@@ -3,7 +3,7 @@
 
 ?>
 
-    <div class="container"><!--inicio de container-->
+    <div class="container" id="ciu"><!--inicio de container-->
     <h2 class="text-center">Formulario Ciudad</h2>
     <hr>
               <div class="row"><!--inicio de row principal 1-->

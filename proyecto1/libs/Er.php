@@ -2,11 +2,21 @@
 
 class Er {
 
+   public function validar_foto($archivo){
+   $var aux = $archivo.split(‘.’);
+   if($aux[$aux.length-1] == ‘jpg’)
+      return true;
+   else{
+      //alert(‘El archivo debe ser .jpg’);
+      return false;
+   }
+}
+
      public function valida_alfanumericos($valor){
 		if (!ereg("^[a-zA-Z0-9 ]+$",$valor)) {
 		 
 		 return false;
-		else {
+		}else {
 		// Su código o una confirmación
 		 
 		 return true;
@@ -17,12 +27,12 @@ class Er {
 			if (!ereg("^[0-9]+$",$valor)) {
 			 
 			 return false;
-			else {
+			}else {
 			// Su código o una confirmación
-			 return false 
+			 return false;
 			}
     }
-}
+
 
       public function valida_url($valor){
 			if (ereg("^[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu)$",$valor)) {
@@ -34,27 +44,27 @@ class Er {
       }
 }
     
-	public function valida_email($valor){
+	/*public function valida_email($valor){
 		$exp_reg = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
 		if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
 		     return false;
 		} 
-	}
+	}*/
 
 	public function valida_nombre($valor){
-        if(preg_match("/^([a-zA-ZñÑ\s]{2,50})+$/",$valor))
+        if(preg_match("/^([a-zA-ZñÑ\s]{2,50})+$/",$valor)){
                 return true;
-            else{
+            }else{
                 return false;
             }
     }
 
      public function valida_email($valor){
-        if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$valor))
+        if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$valor)){
             return true;
-        else{
+        }else{
             return false;
             }
         } 
@@ -93,13 +103,13 @@ class Er {
             }
     }
 
-       public function valida_nombre($valor){
+       /*public function valida_nombre($valor){
         if(preg_match("/^([a-zA-ZÃ±Ã‘\s]{2,50})+$/",$valor))
                 return true;
             else{
                 return false;
             }
-    }
+    }*/
 
     public function valida_curp($valor){  
         if(preg_match("/^(^.*(?=.{18})(?=.*[0-9])(?=.*[A-ZÃ‘]).*$)+$/",$valor))

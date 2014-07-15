@@ -4,10 +4,15 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Estadio.php');
-  //include ('../../controllers/EquipoController.php');
+  include ('../../controllers/EstadioController.php');
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
 
+  if(isset($_POST['nombre'])){//exclusivo para imprimir arreglos, verifica que nombre tenga algo
+
+  $estadioC = new EstadioController();
+  $estadioC->insertaEstadio($_POST);//manda llamar la accion
+ }
 ?>
 
     <div class="container"><!--inicio de container-->
@@ -21,14 +26,14 @@
                           <input type="text" class="form-control" name="nombre" placeholder="Enter nombre estadio">
                   </div>
                   <div class="form-group">
-                          <label for="nombre">Ciudad:</label>
-                          <select name="ciudad">
+                          <label for="idciudad">Ciudad:</label>
+                          <select name="idciudad">
                           <option value="">Selecciona una opci&oacute;n</option>
-                          <option value="madrid">Madrid</option>
-                          <option value="milan">Milan</option>
-                          <option value="munich">Munich</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <!--<option value="munich">Munich</option>
                           <option value="porto">Porto</option>
-                          <option value="porto_alegre">Porto Alegre</option>
+                          <option value="porto_alegre">Porto Alegre</option>-->
                         </select>
                   </div>
                         <left><input type="submit" class="btn btn-primary" value="aceptar"></button><left>

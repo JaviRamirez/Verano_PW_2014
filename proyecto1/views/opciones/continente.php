@@ -5,23 +5,41 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Continente.php');
-  //include ('../../controllers/EquipoController.php');
+  include ('../../controllers/ContinenteController.php');
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
 
+
+   if(isset($_POST['nombre'])){
+     
+     $continenteC = new ContinenteController();
+     $continenteC->insertaContinente($_POST); 
+   }
+
+
 ?>
 
-    <div class="container"><!--inicio de container-->
+    <div class="container" id="cont"><!--inicio de container-->
               <h2 class="text-center">Continente</h2>
               <hr>
               <div class="row"><!--inicio de row principal 1-->
               <!--Inicia form-->
                   <form role="form" action="" method="post">
                   <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Enter nombre">
-                        </div>
-		                    <left><button class="btn btn-primary" id="aceptar" name="aceptar">Aceptar</button><left>
+                          <label for="nombre">Ciudad:</label>
+                          <select name="nombre">
+                          <option value="">Selecciona una opci&oacute;n</option>
+                          <option value="America">America</option>
+                          <option value="Asia">Asia</option>
+                          <option value="Africa">Africa</option>
+                          <option value="Europa">Europa</option>
+                          <option value="Oceania">Oceania</option>
+                          <!--<option value="munich">Munich</option>
+                          <option value="porto">Porto</option>
+                          <option value="porto_alegre">Porto Alegre</option>-->
+                        </select>
+                  </div>
+		                    <left><input type="submit" class="btn btn-primary" value="aceptar"></button><left>
 		                    
                   </form>
             <!--fin de form-->

@@ -1,5 +1,17 @@
 <?php
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Entrenador.php');
+  include ('../../controllers/EntrenadorController.php');
+  include ('../../libs/Er.php');
   include ('../layouts/header.php');
+
+  if(isset($_POST['idpais'])){
+    $entrenadorC = new EntrenadorController();
+    $entrenadorC->insertaEntrenador($_POST);
+  }
 
 ?>
 
@@ -11,13 +23,16 @@
                 <form role="form" action="" method="post">
                         <div class="form-group">
                           <div class="form-group">
-                              <label for="posicion">Pa&iacute;s:</label>
-                            <select name="nombre">
-                              <option value="brasil">Brasil</option>
+                              <label for="idpais">Pa&iacute;s:</label>
+                            <select name="idpais">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <!--<option value="brasil">Brasil</option>
                               <option value="alemania">Alemania</option>
                               <option value="costa_rica">Costa Rica</option>
                               <option value="uruguay">Uruguay</option>
-                              <option value="francia">Francia</option>
+                              <option value="francia">Francia</option>-->
                             </select>
                           </div>
                     </div>

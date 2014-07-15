@@ -14,7 +14,7 @@ class Continente extends Modelo{
     
     public $errores = array( );
     
-    private $idcontinente;
+    //private $idcontinente;
     private $nombre;
        
     
@@ -46,13 +46,13 @@ class Continente extends Modelo{
             $this->nombre = trim($valor);
     }
 
-    public function get_idcontinente(){
+    /*public function get_idcontinente(){
         return $this->idcontinente;
     }
     
     public function set_idcontinente($valor){
         $this->idcontinente = trim($valor);
-    }
+    }*/
         
 }
 

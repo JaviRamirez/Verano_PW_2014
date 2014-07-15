@@ -5,9 +5,14 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Pais.php');
-  //include ('../../controllers/EquipoController.php');
+  include ('../../controllers/PaisController.php');
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
+
+  if(isset($_POST['nombre'])){
+    $paisC = new PaisController();
+    $paisC->insertaPais($_POST);
+  }
 
 ?>
      
@@ -26,8 +31,8 @@
 		                      
 		              </div>
                   <div class="form-group">
-                          <label for="nombre">Continente:</label>
-                          <select name="nombre">
+                          <label for="idcontinente">Continente:</label>
+                          <select name="idcontinente">
                           <option value="">Selecciona una opci&oacute;n</option>
                           <option value="america">America</option>
                           <option value="asia">Asia</option>

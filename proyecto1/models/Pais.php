@@ -7,18 +7,18 @@ class Pais extends Modelo{
     
     public $atributos = array(
         
-        'idpais'=>array(),
+        //'idpais'=>array(),
         'nombre'=>array(),
         'bandera'=>array(),
-        'continente'=>array()
+        'idcontinente'=>array()
     );
     
     public $errores = array( );
     
-    private $idpais;
+    //private $idpais;
     private $nombre;
     private $bandera;
-    private $continente;
+    private $idcontinente;
        
     
     function Pais(){
@@ -49,13 +49,13 @@ class Pais extends Modelo{
             $this->nombre = trim($valor);
     }
 
-    public function get_idpais(){
+    /*public function get_idpais(){
         return $this->idpais;
     }
     
     public function set_idpais($valor){
         $this->idpais = trim($valor);
-    }
+    }*/
     
     public function get_bandera(){
         return $this->bandera;
@@ -65,12 +65,12 @@ class Pais extends Modelo{
         $this->bandera = trim($valor);
     }
 
-    public function get_continente(){
-        return $this->idpais;
+    public function get_idcontinente(){
+        return $this->idcontinente;
     }
     
-    public function set_continente($valor){
-        $this->idpais = trim($valor);
+    public function set_idcontinente($valor){
+        $this->idcontinente = trim($valor);
     }
 }
 

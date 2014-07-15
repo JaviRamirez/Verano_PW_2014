@@ -7,14 +7,14 @@ class Posicion extends Modelo{
     
     public $atributos = array(
         
-        'idposicion'=>array(),
+        //'idposicion'=>array(),
         'nombre'=>array(),
         'abreviatura'=>array()
     );
     
     public $errores = array( );
     
-    private $idposicion;
+    //private $idposicion;
     private $nombre;
     private $abreviatura;
        
@@ -47,13 +47,13 @@ class Posicion extends Modelo{
             $this->nombre = trim($valor);
     }
 
-    public function get_idposicion(){
+    /*public function get_idposicion(){
         return $this->idposicion;
     }
     
     public function set_idposicion($valor){
         $this->idposicion = trim($valor);
-    }
+    }*/
     
     public function get_abreviatura(){
         return $this->abreviatura;

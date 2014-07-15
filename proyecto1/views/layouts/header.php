@@ -72,13 +72,13 @@
 
                 <li class="divider"></li>
 
-                <li><a href="<?php echo BASEURL; ?>/views/opciones/goles_Jugador.php"> Formulario Goles Jugadores </a></li>
+                <!--<li><a href="<?php echo BASEURL; ?>/views/opciones/goles_Jugador.php"> Formulario Goles Jugadores </a></li>-->
 
-                <li class="divider"></li>
+                <!--<li class="divider"></li>-->
 
-                <li><a href="<?php echo BASEURL; ?>/views/opciones/juego.php"> Formulario juego</a></li>
+                <!--<li><a href="<?php echo BASEURL; ?>/views/opciones/juego.php"> Formulario juego</a></li>-->
 
-                <li class="divider"></li>
+                <!--<li class="divider"></li>-->
 
                 <li><a href="<?php echo BASEURL; ?>/views/opciones/jugador.php"> Formulario jugador</a></li>
 
@@ -88,11 +88,11 @@
 
                 <li class="divider"></li>
 
-                <li><a href="<?php echo BASEURL; ?>/views/opciones/posicion.php"> Formulario posici&oacute;n</a></li>
+                <li><a href="<?php echo BASEURL; ?>/views/opciones/posision.php"> Formulario posici&oacute;n</a></li>
 
                 <li class="divider"></li>
 
-                <li><a href="<?php echo BASEURL; ?>/views/opciones/tarjetas_jugador.php"> Formulario tarjetas jugador</a></li>
+                <!--<li><a href="<?php echo BASEURL; ?>/views/opciones/tarjetas_jugador.php"> Formulario tarjetas jugador</a></li>-->
                 
               </ul>
             </li>

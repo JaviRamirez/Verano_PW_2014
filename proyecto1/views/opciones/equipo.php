@@ -4,19 +4,18 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Equipo.php');
-  //include ('../../controllers/EquipoController.php');
+  include ('../../controllers/EquipoController.php');
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
 
-  if(isset($_POST['nombre']));//exclusivo para imprimir arreglos
+  if(isset($_POST['nombre'])){//exclusivo para imprimir arreglos, verifica que nombre tenga algo
 
-  echo "<pre>";
-  print_r($_POST);
-  echo "</pre>";
-
+  $equipoC = new EquipoController();
+  $equipoC->insertaEquipo($_POST);//manda llamar la accion
+}
 ?>
 
-    <div class="container"><!--inicio de container-->
+    <div class="container" id="eq"><!--inicio de container-->
               <h2 class="text-center">Equipo</h2>
               <hr>
               <div class="row"><!--inicio de row principal 1-->
@@ -38,7 +37,7 @@
                         </div>
                         <div class="form-group">
                               <label for="escudo">Escudo:</label>
-                              <input type="file" id="escudo">
+                              <input type="file" name="escudo">
                               <p class="help-block">Selecciona una imagen para agregar.</p>
                         </div>
                           <left><input type="submit" class="btn btn-primary" value="aceptar"></button><left>

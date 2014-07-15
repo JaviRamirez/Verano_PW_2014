@@ -208,8 +208,30 @@
          'transitionOut' : 'none',
          'type' : 'iframe'
      });
+
+     //eventos de tipo de integrante
+     //function()
+        $('#container_integrante').show('fast')
+        $('#container_entrenador').hide('0')
+        $('#container_Jugador').hide('0')
+
+$('#entrenador').click(
+          function(){
+            $('#container_Jugador').hide('0')
+            $('#container_entrenador').show('slow')
+            //alert('hola javascript');
+            
+          });
+
+$('#jugador').click(
+          function(){
+            $('#container_entrenador').hide('0')
+            $('#container_Jugador').show('slow')
+            //alert('hola javascript');
+            
+          });
+     //fin de eventos de tipo de integrante
         
-    
     });
 </script>
 

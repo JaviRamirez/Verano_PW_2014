@@ -7,14 +7,14 @@ class Estadio extends Modelo{
     
     public $atributos = array(
         
-        'idestadio'=>array(),
+        //'idestadio'=>array(),
         'nombre'=>array(),
         'idciudad'=>array()
     );
     
     public $errores = array( );
     
-    private $idestadio;
+    //private $idestadio;
     private $nombre;
     private $idciudad;
        
@@ -47,13 +47,13 @@ class Estadio extends Modelo{
             $this->nombre = trim($valor);
     }
 
-    public function get_idestadio(){
+   /* public function get_idestadio(){
         return $this->idestadio;
     }
     
     public function set_idestadio($valor){
         $this->idestadio = trim($valor);
-    }
+    }*/
     
     public function get_idciudad(){
         return $this->idciudad;

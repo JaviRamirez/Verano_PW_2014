@@ -1,5 +1,17 @@
 <?php
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Jugador.php');
+  include ('../../controllers/JugadorController.php');
+  include ('../../libs/Er.php');
   include ('../layouts/header.php');
+
+  if(isset($_POST['nombre'])){
+    $jugadorC = new JugadorController();
+    $jugadorC->insertaJugador($_POST);
+  }
 
 ?>
   

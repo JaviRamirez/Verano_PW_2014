@@ -8,7 +8,7 @@ class Equipo extends Modelo{
     public $atributos = array(
         'nombre'=>array(),
         'idpais'=>array(),
-        'escudo'=>array(),
+        'escudo'=>array()
     );
     
     public $errores = array( );
