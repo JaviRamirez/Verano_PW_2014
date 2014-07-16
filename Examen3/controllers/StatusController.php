@@ -16,8 +16,10 @@
 
 			if(count($status->errores)>0){
 				print_r($status->errores);
+				die();//detieene o mata todo el script.
 			}
-			//die();//detieene o mata todo el script.
+			
+			$status->inserta($status->get_atributos());
 
 		}
 

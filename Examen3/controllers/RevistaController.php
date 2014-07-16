@@ -26,8 +26,10 @@
 
 			if(count($revista->errores)>0){
 				print_r($revista->errores);
+				die();//detieene o mata todo el script.
 			}
 			//die();//detieene o mata todo el script.
+			$revista->inserta($revista->get_atributos());
 
 		}
 

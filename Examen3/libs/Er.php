@@ -11,15 +11,15 @@ class Er {
 		} 
 	}
 
-	/*public function validar_foto($archivo){
-   $var aux = $archivo.split(‘.’);
-   if($aux[$aux.length-1] == ‘jpg’)
+	public function validar_foto($archivo){
+   $var= $archivo.split(‘.’);
+   if($var[$var.length-1] == ‘pdf’)
       return true;
    else{
       //alert(‘El archivo debe ser .jpg’);
       return false;
    }
-}*/
+}
 
      public function valida_alfanumericos($valor){
 		if (!ereg("^[a-zA-Z0-9 ]+$",$valor)) {

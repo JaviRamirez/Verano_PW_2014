@@ -18,9 +18,10 @@
 
 			if(count($autor->errores)>0){
 				print_r($autor->errores);
+				die();//detieene o mata todo el script.
 			}
-			//die();//detieene o mata todo el script.
-
+			
+            $autor->inserta($autor->get_atributos());
 		}
 
 		public function validaUsuario($datos){

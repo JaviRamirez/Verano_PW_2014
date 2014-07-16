@@ -33,8 +33,9 @@
                   <input type="text" class="form-control" name="nombre" placeholder="Enter nombre">
                 </div>
                 <div class="form-group">
-                  <label for="portada">Portada:</label>
-                  <input type="text" class="form-control" name="portada" placeholder="Enter portada">
+                      <label for="portada">Portada:</label>
+                      <input type="file" id="portada" name="portada">
+                      <p class="help-block">Seleccione un archivo.</p>
                 </div>
                 <div class="form-group">
                     <div class='input-group date' id='datetimepicker_revista' data-date-format="YYYY/MM/DD">

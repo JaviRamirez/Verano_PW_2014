@@ -34,11 +34,11 @@ class Status extends Modelo{
 
     public function set_status($valor){
 
-        $er=new ER();
+        /*$er=new ER();
         if(!$er->valida_numericos($valor)){
             $this->errores[] = "Este dato (".$valor.") no es valido";
             
-        }
+        }*/
 
             $this->status = trim($valor);
         
