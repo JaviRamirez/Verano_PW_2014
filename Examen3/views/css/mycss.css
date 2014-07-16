@@ -1,0 +1,77 @@
+body { padding-top: 70px; }
+
+body #eq{background-image:url("../images/e1.png");
+/*background-repeat:repeat;*/
+background-size: 100% auto;
+}
+
+body #int{background-image:url("../images/1_b.jpg");
+/*background-repeat:no-repeat;*/
+background-size: 100% auto;
+}
+
+body #ciu{background-image:url("../images/4_b.jpg");
+/*background-repeat:no-repeat;*/
+background-size: 100% auto;
+}
+
+body #cont{background-image:url("../images/5_b.jpg");
+/*background-repeat:repeat;*/
+background-size: 100% auto;
+}
+/*estilos revista*/
+
+/*body #id_rev{background-image:url("../images/f2.jpg");
+background-repeat:no-repeat;
+background-size: 100% auto;
+}*/
+
+/*fin estilos de revista*/
+
+
+#h1{background-image:url("../images/p1.jpg");
+/*background-repeat:repeat;*/
+background-size: 100% auto;
+}
+
+.d1{
+  background-color:blue;
+  color:#F7EC3C;
+  font-family:Arial;
+  font-size:10pt;
+  /*text-align:center;*/
+
+}
+
+.d2{
+  background-color:black;
+  color:#F7EC3C;
+  font-family:Arial;
+  font-size:10pt;
+  /*text-align:center;*/
+
+}
+
+#sec1,#sec2,#sec3,#sec4{
+  background-color:black;
+  color:white;
+  font-family:Arial;
+  font-size:10pt;
+  /*text-align:center;*/
+
+}
+
+#s1,#s2,#s3,#s4,#fondo1{
+  background-color:black;
+  color:#F7EC3C;
+
+}
+
+/*#fondo1{
+  background-image:url("../images/sexy.jpg");
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+  color:#F7EC3C;
+
+}+/
+

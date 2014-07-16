@@ -1,8 +1,17 @@
 <?php
 
 class Er {
+    
+	public function valida_email($valor){
+		$exp_reg = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
+		if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
 
-   /*public function validar_foto($archivo){
+	/*public function validar_foto($archivo){
    $var aux = $archivo.split(‘.’);
    if($aux[$aux.length-1] == ‘jpg’)
       return true;
@@ -29,7 +38,7 @@ class Er {
 			 return false;
 			}else {
 			// Su código o una confirmación
-			 return false;
+			 return true;
 			}
     }
 
@@ -61,13 +70,13 @@ class Er {
             }
     }
 
-     public function valida_email($valor){
+     /*public function valida_email($valor){
         if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$valor)){
             return true;
         }else{
             return false;
             }
-        } 
+        } */
 
         public function valida_username($valor){
         if(preg_match("/^([a-zA-Z0-9])+$/",$valor))
