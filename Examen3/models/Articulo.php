@@ -177,13 +177,13 @@ class Articulo extends Modelo{
 
     public function set_archivo_pdf($valor){
 
-        /*$er=new ER();
-        if(!$er->valida_archivos($valor)){
-            $this->errores[] = "Este archivo_pdf (".$valor.") no es valido";
+        $er=new ER();
+        if($er->valida_PDF($valor['type'])||!$er->valida_tamanio($valor['size'])){
+            $this->errores[] = 'Este archivo ('.$valor['name'].') no es valido';
             
-        }*/
+        }
 
-            $this->archivo_pdf = trim($valor);
+            $this->archivo_pdf = $valor;
         
     }
 

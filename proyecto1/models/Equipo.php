@@ -59,7 +59,12 @@ class Equipo extends Modelo{
     }
     
     public function set_escudo($valor){
-        $this->escudo = trim($valor);
+        $er = new Er();
+        
+        if ($er->valida_tipo($valor['type'])||!$er->valida_tamanio($valor['size'])){
+            $this->errores[] = 'Este valor ('.$valor['name'].') no es valido';
+        }
+        $this->escudo = $valor;
     }
 
 

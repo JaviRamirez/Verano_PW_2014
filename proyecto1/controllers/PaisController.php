@@ -1,25 +1,35 @@
 <?php
-	class PaisController {
+	class PaisController extends Pais{
 		
 		public $muestra_errores = false;
 
 		function __construct(){
-			 //parent::Continente();
+			 parent::Pais();
 		}
 
-		public function insertaPais($datos){
-			echo "<pre>datos:";
+		public function insertaPais($datos,$archivos){
+			/*echo "<pre>datos:";
 			print_r($datos);
-			echo "</pre>";
-			$pais=new Pais();//se prueba conexion
-			$pais->set_nombre($datos['nombre']);
-			$pais->set_bandera($datos['bandera']);
-			$pais->set_idcontinente($datos['idcontinente']);
+			print_r($archivos);
+			echo "</pre>";*/
 
-			if(count($pais->errores)>0){
-				print_r($pais->errores);
+			//$pais=new Pais();//se prueba conexion
+			$this->set_nombre($datos['nombre']);
+			$this->set_bandera($archivos['bandera']);
+			$this->set_idcontinente($datos['idcontinente']);
+
+			if(count($this->errores)>0){
+				//print_r($this->errores);
+				$this->muestra_errores = true;
+				//die();//detieene o mata todo el script.
+			}else{
+				//mueve la imagen
+				//move_uploaded_file($archivos['bandera']['tmp_name'],//ruta origen
+				//"../images/".$archivos['bandera']['name']);//ruta destino
+
+				//$pais->inserta($pais->get_atributos());
+			
 			}
-			//die();//detieene o mata todo el script.
 
 		}
 		

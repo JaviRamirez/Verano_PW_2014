@@ -11,7 +11,7 @@ class Er {
 		} 
 	}
 
-	public function validar_foto($archivo){
+	/*public function validar_foto($archivo){
    $var= $archivo.split(‘.’);
    if($var[$var.length-1] == ‘pdf’)
       return true;
@@ -19,7 +19,7 @@ class Er {
       //alert(‘El archivo debe ser .jpg’);
       return false;
    }
-}
+}*/
 
      public function valida_alfanumericos($valor){
 		if (!ereg("^[a-zA-Z0-9 ]+$",$valor)) {
@@ -33,7 +33,7 @@ class Er {
 }
 
       public function valida_numericos($valor){
-			if (!ereg("^[0-9]+$",$valor)) {
+			if(!ereg("^[0-9]+$",$valor)){
 			 
 			 return false;
 			}else {
@@ -119,6 +119,61 @@ class Er {
                 return false;
             }
     }*/
+
+    public function valida_tipo($valor){
+     //if(isset($_POST['aceptar10'])){    
+    $mime = array('image/jpg', 'image/jpeg','image/png');
+    # Buscamos si el archivo que subimos tiene el MIME type que permitimos en nuestra subida
+    if( !in_array( $valor, $mime))
+    {    
+        //print_r('<p>Ups! Solamente puedes subir imágenes con la extensión JPG, JPEG, o PNG</p>');
+
+        return true;
+    }else{
+        //print_r('<p>la imagen es correcta! el valor de:'.$valor.' es valido</p>');
+        return false;
+    }
+ //}
+
+}
+
+        public function valida_PDF($valor){
+             //if(isset($_POST['aceptar10'])){    
+            $mime = array('application/pdf');
+            # Buscamos si el archivo que subimos tiene el MIME type que permitimos en nuestra subida
+            if( !in_array( $valor, $mime))
+            {
+                //print_r('<p>Ups! Solamente puedes subir archivos con extension PDF</p>');
+
+                return true;
+            }else{
+                //print_r('<p>el archivo es correcto! el archivo:'.$valor.' es valido</p>');
+                return false;
+            }
+         //}
+
+        }
+    # Le decimos al usuario que se olvido de subir un archivo
+    /*if( $valor['portada']['type'] == '' )
+    {
+        print_r('Hey -.-, te olvidaste de un pequeño detalle... No subiste ningún archivo!');
+        return true;
+    }*/
+    public function valida_tamanio($valor){
+    # Indicamos hasta que peso de archivo puede subir el usuario. Tamaño maximo que se aceptara ser de 5mb.
+    if( $valor < 5500000) //4.8 Mb  
+    {
+        
+        //print_r('<p>El archivo que subio esta dentro del limite:'.$valor.' entro en el if</p>');
+        return true;
+        
+    }else{
+        //print_r('<p>el archivo esta pesado:'.$valor.' bajale, entro al if</p>');
+        return false;
+
+    }
+
+}
 
     public function valida_curp($valor){  
         if(preg_match("/^(^.*(?=.{18})(?=.*[0-9])(?=.*[A-ZÃ‘]).*$)+$/",$valor))

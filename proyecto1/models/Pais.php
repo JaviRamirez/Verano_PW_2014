@@ -48,21 +48,18 @@ class Pais extends Modelo{
 
             $this->nombre = trim($valor);
     }
-
-    /*public function get_idpais(){
-        return $this->idpais;
-    }
-    
-    public function set_idpais($valor){
-        $this->idpais = trim($valor);
-    }*/
     
     public function get_bandera(){
         return $this->bandera;
     }
     
     public function set_bandera($valor){
-        $this->bandera = trim($valor);
+        $er = new Er();
+        
+        if ($er->valida_tipo($valor['type'])||!$er->valida_tamanio($valor['size'])){
+            $this->errores[] = 'Este valor de bandera ('.$valor['name'].') no es valido';
+        }
+        $this->bandera = $valor;
     }
 
     public function get_idcontinente(){

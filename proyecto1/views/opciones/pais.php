@@ -9,36 +9,54 @@
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
 
+  $paisC = new PaisController();
+
   if(isset($_POST['nombre'])){
-    $paisC = new PaisController();
-    $paisC->insertaPais($_POST);
+    
+    $paisC->insertaPais($_POST,$_FILES);
   }
 
 ?>
      
      <div class="container"><!--inicio de container-->
      <h2 class="text-center">Pa&iacute;s</h2>
+
+     <?php
+          if ($paisC->muestra_errores) {
+            ?>
+            <div class="alert alert-danger">
+              <?php
+                  foreach ($paisC->errores as $value) {//se especifica un arreglo, y regresa la llave
+                    echo '<p>¡¡¡ Error  !!! '.$value.'</p>';
+                  }
+              ?>
+        </div>
+        <?php    
+              
+          }
+        ?>
+
      <hr>
      <div class="row"><!--inicio de row principal 1-->
-              <form role="form" id="id_form10" action="" method="POST">
+              <form role="form" id="id_form10" action="" method="POST" ENCTYPE="multipart/form-data">
 		              <div class="form-group">
                           <label for="nombre">Nombre:</label>
-                          <input type="text" class="form-control"  name="nombre" placeholder="Enter name">
+                          <input type="text" class="form-control"  name="nombre" placeholder="Enter name" value="<?php echo $paisC->get_nombre(); ?>">
                   </div>
 		              <div class="form-group">
 		                      <label for="bandera">Bandera</label>
-		                      <input type="file" id="bandera" name="bandera">
+		                      <input type="file" id="bandera" name="bandera" value="<?php echo $paisC->get_bandera(); ?>">
 		                      
 		              </div>
                   <div class="form-group">
-                          <label for="idcontinente">Continente:</label>
-                          <select name="idcontinente">
+                          <label for="idcontinente">idContinente:</label>
+                          <select name="idcontinente" value="<?php echo $paisC->get_idcontinente(); ?>">
                           <option value="">Selecciona una opci&oacute;n</option>
-                          <option value="america">America</option>
-                          <option value="asia">Asia</option>
-                          <option value="oceania">Oceania</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <!--<option value="oceania">Oceania</option>
                           <option value="africa">Africa</option>
-                          <option value="europa">Europa</option>
+                          <option value="europa">Europa</option>-->
                         </select>
                   </div>
                   <left><input type="submit" class="btn btn-primary" value="aceptar"></button><left>

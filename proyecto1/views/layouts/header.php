@@ -44,6 +44,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo BASEURL; ?>/views/site/inicio.php">Inicio</a></li>
             
+            <?php if(isset($_SESSION['user'])){ ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opciones  <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -96,15 +97,20 @@
                 
               </ul>
             </li>
-
+           <?php } ?>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+          <?php if(!isset($_SESSION['user'])){ ?>
             <li><a href="<?php echo BASEURL; ?>/views/site/login.php">
               <span class="glyphicon glyphicon-log-in"></span> Login</a>
             </li>
+            <?php }else{ ?>
+          <li><a href="<?php echo BASEURL; ?>/views/site/logout.php">
+              <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+            </li>
           </ul>
-          
+          <?php } ?>
 
         </div><!--/.nav-collapse -->
       </div>
